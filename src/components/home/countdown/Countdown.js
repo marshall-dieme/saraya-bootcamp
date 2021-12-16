@@ -19,7 +19,7 @@ class Countdown extends React.Component {
     
 
     setTimer = () => {
-        const countdownDate = new Date(2022, 0, 15, 8, 0, 0)
+        const countdownDate = new Date(2022, 0, 15, 8, 0, 0).getTime()
 
         this.interval = setInterval(() => {
             const now = new Date().getTime()
