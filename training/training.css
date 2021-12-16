@@ -1,0 +1,9 @@
+Flippy {
+    width: '150px';
+    height: '500px';
+}
+
+FrontSide {
+    background-Color: '#41669d';
+    font-family: generate;
+}
