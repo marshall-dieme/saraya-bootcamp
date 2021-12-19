@@ -32,7 +32,7 @@ class Footer extends Component {
                             <ul className="infos">
                                 <li>
                                     <span><ion-icon name="location-outline"></ion-icon></span>
-                                    <span>KM 1 Avenue Cheikh Anta Diop<br/>Dakar, Sénégal</span>
+                                    <span>SICAP Liberté 4<br/>Dakar, Sénégal</span>
                                 </li>
                                 <li>
                                     <span><ion-icon name="call-outline"></ion-icon></span>
@@ -51,7 +51,7 @@ class Footer extends Component {
                         </div>
                     </div>
                 </footer>
-                <div className="copyright">Copyright &copy;  Tous droits réservés</div>
+                <div className="copyright">Copyright &copy; 2022  All rights reserved</div>
             </div>
         );
     }

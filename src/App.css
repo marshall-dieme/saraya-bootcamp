@@ -10,9 +10,6 @@
 body {
   min-height: 100vh;
   background: #f2f2f2;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 a {
@@ -20,39 +17,7 @@ a {
   color: #f2f2f2;
 }
 
-section.content {
+section {
   min-height: 90vh;
   padding: 0 50px;
-}
-
-.section-title {
-  margin-bottom: 20px;
-  border-bottom: 5px solid #182848;
-}
-
-.section-title h3 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  background-color: #182848;
-  border-top-left-radius: 10px;
-  color: #fff;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 54px;
-  font-size: 20px;
-  font-weight: 400;
-  position: relative;
-}
-
-.section-title h3::before {
-  content: '';
-  position: absolute;
-  left: 100%;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border: 25px solid #182848;
-  border-top-color: transparent;
-  border-right-color: transparent;
 }

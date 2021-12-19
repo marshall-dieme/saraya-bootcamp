@@ -13,6 +13,10 @@ section.counter .timer-title {
     position: relative;
 }
 
+a {
+    text-decoration: none;
+    color: #f2f2f2;
+  }
 .counter .timer-title h1 {
     font-size: 4em;
     color: #fff;

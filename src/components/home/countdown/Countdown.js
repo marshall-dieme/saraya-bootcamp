@@ -17,60 +17,22 @@ class Countdown extends React.Component {
         }
     }
     
-
-    setTimer = () => {
-        const countdownDate = new Date(2022, 0, 15, 8, 0, 0).getTime()
-
-        this.interval = setInterval(() => {
-            const now = new Date().getTime()
-            const distance = countdownDate - now
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-            const minutes = Math.floor((distance % (1000 * 60 * 60) / (1000 * 60)))
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-
-            if (distance > 0) {
-                let netSeconds
-                if(seconds.toString().length === 1){
-                    netSeconds = "0"+seconds
-                }else {
-                    netSeconds = seconds
-                }
-                let netMinutes
-                if(minutes.toString().length === 1){
-                    netMinutes = "0"+minutes
-                }else {
-                    netSeconds = minutes
-                }
-                let netHours
-                if(hours.toString().length === 1){
-                    netHours = "0"+hours
-                }else {
-                    netHours = hours
-                }
-                let netDays
-                if(days.toString().length === 1){
-                    netDays = "0"+days
-                }else {
-                    netDays = days
-                }
-                    
-                this.setState({
-                    days : netDays,
-                    hours : netHours,
-                    minutes : netMinutes,
-                    seconds : netSeconds
-                })
-            } else {
-                clearInterval(this.interval.current)
-            }
-
-        }, 1000);
+    calculateLeftTime = () => {
+        let diff = new Date(2022, 0, 15).getTime() - new Date().getTime()
+        if(diff > 0) {
+            this.setState({
+                days : Math.floor((diff / (1000 * 60 * 60 * 24))).toString().length === 1 ? "0"+Math.floor((diff / (1000 * 60 * 60 * 24))) : Math.floor((diff / (1000 * 60 * 60 * 24))),
+                hours : Math.floor((diff / (1000 * 60 * 60) % 24)).toString().length === 1 ? "0"+Math.floor((diff / (1000 * 60 * 60) % 24)) : Math.floor((diff / (1000 * 60 * 60) % 24)),
+                minutes : Math.floor((diff / 1000 * 60) % 60).toString().length === 1 ? "0"+Math.floor((diff / 1000 * 60) % 60) : Math.floor((diff / 1000 * 60) % 60),
+                seconds : Math.floor((diff / 1000) % 60).toString().length === 1 ? "0"+Math.floor((diff / 1000) % 60) : Math.floor((diff / 1000) % 60)
+            })
+        }
     }
 
-    componentDidMount(){
-        this.setTimer()
+    componentDidMount() {
+        setInterval(() => {
+            this.calculateLeftTime()
+        }, 1000);
     }
 
     render() {

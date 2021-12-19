@@ -1,0 +1,109 @@
+.pricing-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    margin-top: 120px;
+}
+
+.price-card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-card .card-banner {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.price-card .card-banner::before {
+    content: 'Best Pricing';
+    width: 150%;
+    height: 40px;
+    position: absolute;
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #57606f;
+    color: #fff;
+    letter-spacing: .1em;
+    box-shadow: 0 5px 10px rgba(red, 0, 0, .05);
+}
+
+.price-card .card-banner::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #2f3542;
+    box-shadow: 140px -140px #2f3542;
+}
+
+.card-content h4 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 50px;
+    color: #2f3542;
+    text-align: center;
+}
+
+.card-content ul {
+    list-style: none;
+}
+
+.card-content ul li {
+    margin: 30px 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-style: italic;
+}
+
+.card-content ul li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    color: green;
+}
+
+.card-content .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content h5 {
+    font-weight: 300;
+    font-size: 1.3em;
+    max-width: 150px;
+    border: 1px solid #2f3542;
+    padding: 15px 20px;
+    transition: .5s;
+    background: #2f3542;
+    color: #fff;
+}
