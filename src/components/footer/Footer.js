@@ -10,7 +10,10 @@ class Footer extends Component {
                     <div className="footer-container">
                         <div className="sec aboutus">
                             <h2>About us</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>
+                                Learn coding in <code>few weeks</code><br />
+                                Our Development bootcamp teaches you all the stack. You will learn the core concepts of object-oriented programming in Java, and structure your software following design patterns like MVC. In addition to mastering back-end programming language (Java, SQL), you will develop your front-end skills using recent techniques like flexbox, CSS grid and learn ES6, the latest version of JavaScript.                              
+                            </p>
                             <ul className="socials">
                                 <li><a href="/"><ion-icon name="logo-facebook"></ion-icon></a></li>
                                 <li><a href="/"><ion-icon name="logo-instagram"></ion-icon></a></li>
@@ -37,14 +40,14 @@ class Footer extends Component {
                                 <li>
                                     <span><ion-icon name="call-outline"></ion-icon></span>
                                     <span>
-                                        <a href="tel:+1234567890">+1 234 567 890</a><br/>
-                                        <a href="tel:+987654321">+0 987 654 321</a>
+                                        <a href="tel:+16148040625">+1 614 804 0625</a><br/>
+                                        <a href="tel:+221776411195">+221 776 411 195</a>
                                     </span>
                                 </li>
                                 <li>
                                     <span><ion-icon name="mail-outline"></ion-icon></span>
                                     <span>
-                                        <a href="mailto:exemple@exemple.com">exemple@exemple.com</a>
+                                        <a href="mailto:vsoumare@yahoo.com">vsoumare@yahoo.com</a>
                                     </span>
                                 </li>
                             </ul>

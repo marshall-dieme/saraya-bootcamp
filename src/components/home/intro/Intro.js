@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import './intro.css'
 
+import img1 from '../../../images/1.jpg'
+import img2 from '../../../images/3.jpg'
+
 class Intro extends Component {
     render() {
         return (
@@ -9,7 +12,7 @@ class Intro extends Component {
 
                 <div className="course-box">
                     <div className="imgBx">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8amF2YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                        <img src={img1} alt="" />
                     </div>
                     <div className="detailBx">
                         <h2>
@@ -23,7 +26,7 @@ class Intro extends Component {
 
                 <div className="course-box">
                     <div className="imgBx">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8amF2YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                        <img src={img2} alt="" />
                     </div>
                     <div className="detailBx">
                         <h2>

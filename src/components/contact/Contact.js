@@ -8,23 +8,36 @@ class Contact extends Component {
         super(props)
     
         this.state = {
-             fName : "",
-             lName : "",
-             email : "",
-             phone : "",
-             message : ""
+            fName : "",
+            lName : "",
+            email : "",
+            phone : "",
+            message : ""
         }
     }
 
+    clearForm = () => {
+        this.setState({
+            fName : "",
+            lName : "",
+            email : "",
+            phone : "",
+            message : ""
+        })
+    }
+
     formSubmit = () => {
-        axios.post("https://localhost:8080", {
+        axios.post("https://localhost:8080/api/contact/send-email", {
             first_name : this.state.fName,
             last_name : this.state.lName,
             email : this.state.email,
             phone : this.state.phone,
             message : this.state.message
-        }).then(resp => console.log(resp))
-        .catch(err => console.warn(err))
+        }).then(resp => {
+            alert("your message has been sent successfully")
+            this.clearForm()
+        })
+        .catch(err => alert("Error while sending message try again later"))
     }
     
     firstNameChange = (event) => {
@@ -98,12 +111,12 @@ class Contact extends Component {
                             </div>
                             <div>
                                 <span><ion-icon name="mail"></ion-icon></span>
-                                <a href="mailto:sarayabootcamp@sayayatech.edu">sarayabootcamp@sayayatech.edu</a>
+                                <a href="mailto:vsoumare@yahoo.com">vsoumare@yahoo.com</a>
                             </div>
                             <div>
                                 <span><ion-icon name="call"></ion-icon></span>
-                                <a href="tel:+1234567890">+1 234 567 890</a> &nbsp; - &nbsp;
-                                <a href="tel:+987654321">+0 987 654 321</a>
+                                <a href="tel:+16148040625">+1 614 804 0625</a> &nbsp; - &nbsp;
+                                <a href="tel:+221776411195">+221 776 411 195</a>
                             </div>
                             <ul className="social-links">
                                 <li><a href="/#"><ion-icon name="logo-facebook"></ion-icon></a></li>
