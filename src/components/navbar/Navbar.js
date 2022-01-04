@@ -10,7 +10,7 @@ class Navbar extends Component {
             <>
                 <header>
                     <div className="logo-div">
-                        <Link to="/" className="logo"><ion-icon name="desktop-outline"></ion-icon> <span>Saraya Bootcamp</span></Link>
+                        <Link to="/" className="logo"><ion-icon name="desktop-outline"></ion-icon> <span>SarayaTech Senegal</span></Link>
                     </div>
                     <ul className="links">
                         <li className="nav-link">
